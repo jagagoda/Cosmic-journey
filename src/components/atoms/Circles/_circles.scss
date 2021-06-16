@@ -1,0 +1,56 @@
+@import "../../_settings/main";
+
+.home {
+  background-color: $backgroundViolet;
+  width: 1440px;
+  height: 768px;
+  position: relative;
+
+  .circle1 {
+    width: 346.42px;
+    height: 346.42px;
+    transform: translate(490px, -762px);
+  }
+
+  .circle2 {
+    width: 346.42px;
+    height: 346.42px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, -99px);
+  }
+
+  .circle3 {
+    width: 346.42px;
+    height: 346.42px;
+    position: absolute;
+    right: 0;
+    top:0;
+    transform: translate(149.2px, 108px);
+  }
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .dot1 {
+    background-color: $pinkDot;
+    top: 0;
+    left: 0;
+    transform: translate(81px, 144px);
+  }
+  .dot2 {
+    background-color: $violetDot;
+    bottom: 0;
+    left: 0;
+    transform: translate(660px, -108px);
+  }
+  .dot3{
+    background-color: $blueDot;
+    top: 0;
+    right: 0;
+    transform: translate(-557px, 84px);
+  }
+}

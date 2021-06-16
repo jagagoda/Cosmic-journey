@@ -1,0 +1,14 @@
+@import "../../_settings/main";
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.hero__container {
+  padding-top: 100px;
+  padding-left: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

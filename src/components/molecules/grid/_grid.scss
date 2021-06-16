@@ -1,0 +1,105 @@
+@import "../../_settings/main";
+
+.grid__container {
+  z-index: 10;
+  margin-right: 220px;
+  width: 351px;
+  height: 447px;
+  grid-gap: 30px;
+  display: grid;
+  grid-template-rows: 208px;
+  grid-template-columns: 160px 381px;
+  .grid__img {
+    max-width: 160px;
+    max-height: 208px;
+    position: relative;
+
+    > div {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      border-radius: 12px;
+    }
+
+    > div.active::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(#2B224A 0%, #463A71 100%);
+      border-radius: 12px;
+      opacity: 0.9;
+      //filter: blur(4px);
+    }
+
+    .grid__img__text {
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+      color: #fff;
+      transition: all 0.5s;
+      width: 100%;
+      text-align: center;
+
+      &.active {
+        bottom: 45%;
+      }
+    }
+  }
+  .grid__row {
+    max-width: 160px;
+    max-height: 208px;
+  }
+  .grid__image {
+    position: relative;
+    max-width: 160px;
+    max-height: 208px;
+    border-radius: 16px;
+  }
+  .grid__image-hovered {
+    position: relative;
+    max-width: 160px;
+    max-height: 208px;
+    border-radius: 16px;
+    opacity: 0.1;
+    }
+  }
+    .grid__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      transform: translate(0,-35px);
+      max-width: 160px;
+      max-height: 208px;
+      border-radius: 16px;
+      background-color: transparent;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .grid__text2 {
+      @extend .grid__text;
+      transform: translate(0, -110px);
+    }
+  .grid__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: translate(0,-100px);
+    max-width: 160px;
+    max-height: 208px;
+    border-radius: 16px;
+    background-color: transparent;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }

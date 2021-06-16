@@ -1,0 +1,15 @@
+@import "../../_settings/main";
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 100px;
+  margin-bottom: 24px;
+  .footer__text-left {
+    margin-left: 165px;
+  }
+  .footer__text-right {
+    margin-right: 164px;
+  }
+}
