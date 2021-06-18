@@ -121,9 +121,8 @@
   max-height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-left: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
 

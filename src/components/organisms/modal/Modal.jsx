@@ -12,7 +12,7 @@ import StarlinkHeader from "./StarlinkHeader";
 import StarlinkRecord from "./StarlinkRecord";
 
 const ModalWindow = ({
-                         onClose, show
+                         onClose, show, loading
                      }) => {
     const [sort, setSort] = useState('');
     const [data, setData] = useState([]);
@@ -41,6 +41,8 @@ const ModalWindow = ({
                 return;
         }
 
+        setSort('');
+
         if (apiCall) {
             apiCall
                 .then(response => {
@@ -50,7 +52,7 @@ const ModalWindow = ({
     }, [show]);
 
     useEffect(() => {
-        if (show !== 'capsules' || show !== 'starlink') {
+        if (!['capsules', 'starlink'].includes(show)) {
             return;
         }
 
@@ -58,20 +60,34 @@ const ModalWindow = ({
             return;
         }
 
-        const newData = data.sort((a, b) => {
-            if (!a.type || !b.type) {
-                return 0;
-            }
+        if(show === 'capsules') {
+            const newData = data.sort((a, b) => {
+                if (!a.type || !b.type) {
+                    return 0;
+                }
 
-            if (sort === 'desc') {
-                return a.type.localeCompare(b.type);
-            } else {
-                return b.type.localeCompare(a.type);
-            }
-        })
+                if (sort === 'desc') {
+                    return a.type.localeCompare(b.type);
+                } else {
+                    return b.type.localeCompare(a.type);
+                }
+            });
 
-        setData(newData);
-    }, [sort, show, data]);
+            setData(newData);
+        } else if(show === 'starlink') {
+            const newData = data
+                            .filter(item => {
+                                return item.height_km !== null;
+                            })
+                            .sort((a, b) => {
+                                const diff = a.height_km - b.height_km;
+
+                                return sort === 'desc' ? diff : -diff;
+                            });
+
+            setData(newData);
+        }
+    }, [sort, show]);
 
 
     if (!show) {
@@ -117,7 +133,11 @@ const ModalWindow = ({
                         <RocketsHeader/>
                         }
                         {show === 'starlink' &&
-                        <StarlinkHeader/>
+                        <StarlinkHeader
+                            sort={sort}
+                            triggerSort={triggerSort}
+
+                        />
                         }
                         <div className="table">
                             {data && data.map((item, index) => {

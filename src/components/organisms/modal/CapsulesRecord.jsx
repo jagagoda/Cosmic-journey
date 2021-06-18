@@ -4,6 +4,7 @@ const CapsulesRecord = ({item}) => {
     const { status, type } = item;
 
     return(
+
         <div className='modal__data'>
             <div className='data__type'>
                 { type }

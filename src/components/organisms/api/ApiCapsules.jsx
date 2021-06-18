@@ -2,16 +2,15 @@ import React, {useState} from "react";
 import './_api.scss';
 import Api from "../../../api";
 
-
-const ApiStarlink = () => {
+const ApiCapsules = () => {
     const [error, setError] = useState("");
-    const [starlink, getStarlink] = useState([]);
+    const [capsules, getCapsules] = useState([]);
 
-    const getDataStarlink = () => {
-        Api.getStarlink()
+    const getDataCapsules = () => {
+        Api.getCapsules()
             .then(response => {
                 console.log("res", response.data);
-                getStarlink(response.data);
+                getCapsules(response.data);
             })
             .catch(error => {
                 console.log("Error: ", error);
@@ -19,11 +18,8 @@ const ApiStarlink = () => {
             });
     };
 
-    return (
-        <>
-        </>
-    );
+
 };
 
 
-export default ApiStarlink
+export default ApiCapsules

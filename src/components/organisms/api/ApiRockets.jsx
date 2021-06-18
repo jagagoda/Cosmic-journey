@@ -5,7 +5,6 @@ import Api from "../../../api";
 const ApiRockets = () => {
     const [error, setError] = useState("");
     const [rockets, getRockets] = useState([]);
-    // const [isFetchingData, setIsFetchingData] = useState(false);
 
     const getDataRockets = () => {
         Api.getRockets()
@@ -18,11 +17,6 @@ const ApiRockets = () => {
                 setError(error);
             });
     };
-
-    return (
-        <>
-        </>
-    );
 };
 
 

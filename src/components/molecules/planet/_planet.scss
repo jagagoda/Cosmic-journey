@@ -29,15 +29,17 @@
     }
     .launching {
       @extend .rocket__image;
-      -webkit-animation: launching 5s 1 alternate;
-      animation: launching 5s 1 alternate;
+      animation: launching 5s;
 
       @keyframes launching {
         0% {
           transform: translateY(0);
         }
-        100% {
+        50% {
           transform: translateY(-200%);
+        }
+        100% {
+          transform: translateY(0);
         }
       }
     }

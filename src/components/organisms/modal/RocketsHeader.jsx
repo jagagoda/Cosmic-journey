@@ -7,12 +7,12 @@ const RocketsHeader = () => {
             <div
                 className="type"
             >
-                Name
+             Name
             </div>
             <div
                 className="status"
             >
-                <h1>Active</h1>
+                <h1>Mass [kg]</h1>
             </div>
         </div>
     )

@@ -1,18 +1,18 @@
-import React from "react";
+import Loader from "react-loader-spinner";
 
-const RocketRecord = ({item}) => {
-    const { height_km, velocity_kms } = item;
+const RocketRecord = ({ item }) => {
+  const { height_km, velocity_kms } = item;
 
-    return(
-        <div className='modal__data'>
-            <div className='data__type'>
-                { velocity_kms }
-            </div>
-            <div className={'data__status'}>
-                { height_km }
-            </div>
-        </div>
-    )
-}
+  if (!velocity_kms || !height_km) {
+    return null;
+  }
+
+  return (
+    <div className="modal__data">
+      <div className="data__type">{height_km}</div>
+      <div className={"data__status"}>{velocity_kms}</div>
+    </div>
+  );
+};
 
 export default RocketRecord;

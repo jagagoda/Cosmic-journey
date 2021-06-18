@@ -2,7 +2,7 @@
 import React from "react";
 
 const RocketRecord = ({item}) => {
-    const { name, country } = item;
+    const { name, mass } = item;
 
     return(
         <div className='modal__data'>
@@ -10,7 +10,7 @@ const RocketRecord = ({item}) => {
                 { name }
             </div>
             <div className={'data__status'}>
-                { country }
+                { mass.kg }
             </div>
         </div>
     )
