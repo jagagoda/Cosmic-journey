@@ -1,3 +1,9 @@
+This is a pixel perfect project done as part of a recruiting assignment. The project uses the SpaceX api to display information related to space conquest.
+You can sort numeric data by clicking on the arrows that appear when you hover over the parameter name. 
+
+Enjoy your little cosmic journey!
+https://cosmic-journey.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
