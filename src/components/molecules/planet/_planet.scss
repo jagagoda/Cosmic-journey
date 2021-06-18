@@ -42,7 +42,7 @@
           transform: translateY(0);
         }
       }
-    }
+  }
     .fly {
       @extend .legs__image;
       animation: fly 5s;
