@@ -1,4 +1,4 @@
-This is a pixel perfect project done as part of a recruiting assignment. The project uses the SpaceX api to display information related to space conquest.
+This is a pixel perfect project done as part of a recruiting assignment created with React and Sass. The project uses the SpaceX api to display information related to space conquest.
 You can sort numeric data by clicking on the arrows that appear when you hover over the parameter name. 
 
 Enjoy your little cosmic journey!
