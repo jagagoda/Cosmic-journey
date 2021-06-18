@@ -1,5 +1,3 @@
-import Loader from "react-loader-spinner";
-
 const RocketRecord = ({ item }) => {
   const { height_km, velocity_kms } = item;
 
@@ -10,7 +8,7 @@ const RocketRecord = ({ item }) => {
   return (
     <div className="modal__data">
       <div className="data__type">{height_km}</div>
-      <div className={"data__status"}>{velocity_kms}</div>
+      <div className="data__status">{velocity_kms}</div>
     </div>
   );
 };
