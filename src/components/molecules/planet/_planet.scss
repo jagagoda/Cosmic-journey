@@ -43,6 +43,22 @@
         }
       }
     }
+    .fly {
+      @extend .legs__image;
+      animation: fly 5s;
+
+      @keyframes fly {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-1200%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
 
     .smoke1__image {
       position: absolute;

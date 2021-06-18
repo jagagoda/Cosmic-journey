@@ -17,7 +17,7 @@ const Planet = () => {
                 <img src={rocket} alt="rocket" className={launching ? "launching" : "rocket__image"} />
                 <img src={smoke1} alt="smoke1" className={launching ? "shake1" : "smoke1__image" }/>
                 <img src={smoke2} alt="smoke2" className={launching ?"shake2" : "smoke2__image"}/>
-                <img src={legs} alt="rocket legs" className="planet__img legs__image"/>
+                <img src={legs} alt="rocket legs" className={launching ? "fly" : "planet__img legs__image"}/>
             </div>
             <div className="button">
                 <button className="rocket__btn" onClick={animate}>Launch Rocket</button>
